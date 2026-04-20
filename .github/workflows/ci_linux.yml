@@ -1,0 +1,40 @@
+name: CI Linux
+
+on:
+  push:
+    paths:
+      - '.github/workflows/ci_linux.yml'
+      - 'test/**'
+      - 'src/**'
+  pull_request:
+    paths:
+      - '.github/workflows/ci_linux.yml'
+      - 'test/**'
+      - 'src/**'
+
+jobs:
+  tcc-linux:
+    name: Test Runner
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install V language
+        run: |
+          git clone --depth=1 https://github.com/vlang/v
+          cd v
+          make
+          sudo ./v symlink
+          v version
+
+      - name: Run tests
+        run: |
+          cd ./test
+          if v run main.v; then
+            echo "✅ Tests passed successfully"
+          else
+            echo "❌ Tests failed: $?"
+            exit 1
+          fi

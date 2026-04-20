@@ -1,6 +1,6 @@
 <div align="center" style="display:grid;place-items:center;">
 	<p>
-	    <a href="https://github.com/Sekai-Engine/slang" target="_blank"><img width="180" src="./docs/public/slang.png" alt="slang"></a>
+	    <a href="https://atomgit.com/Sekai-Engine/slang" target="_blank"><img width="180" src="./docs/public/slang.png" alt="slang"></a>
         <h1>Slang</h1>
     <p>
     <img src="https://img.shields.io/badge/License-MIT--License-blue.svg?style=flat-square&logo=opensourceinitiative&logoSize=14" alt="License" height="20">
@@ -19,7 +19,7 @@ slang解释器使用csharp开发，是sekai引擎的核心部分，主要用于�
 
 # 下载
 
-您可以在[发行版](https://github.com/Sekai-Engine/slang/releases)直接获取slang解释器.
+您可以在[发行版](https://atomgit.com/Sekai-Engine/slang/releases)直接获取slang解释器.
 
 # 编译
 

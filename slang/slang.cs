@@ -61,7 +61,7 @@ public class Make
 					{
 						WriteIndented = true,
 						Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-						DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+						DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
 					};
 					string flag = JsonSerializer.Serialize(Ezlang.ReadFile(args[1]), options);
 					Console.WriteLine(flag);
