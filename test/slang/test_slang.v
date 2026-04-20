@@ -14,7 +14,7 @@ pub fn test_slang() {
 			flag += 'You can execute in the main directory of the slang project:\n'
 			flag += '\tdotnet run --project slang json ./test${file[1..]}\n'
 			flag += 'If need to ${term.yellow('update the compilation information')}, you can run:\n'
-			flag += '\tv run main.v .${file[1..]}'
+			flag += '\tv run main.v .${file[1..]}\n'
 		}
 	}
 	if flag != '\n' {
