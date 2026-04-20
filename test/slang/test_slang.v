@@ -8,6 +8,7 @@ pub fn test_slang() {
 	mut flag := '\n'
 	for file in files {
 		load_data := run_slang(file) or { continue }
+		print('data: ${load_data}')
 		read_data := tools.read_file(file).split("@[exit]")[1].trim_space()
 		if load_data != read_data {
 			flag += '${term.red('Error')}: Test file: ${file} exhibits unexpected behavior.\n'

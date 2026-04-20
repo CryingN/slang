@@ -26,6 +26,10 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Pre-warm .NET SDK (Consume First-Run Output)
+        run: |
+          dotnet --info > /dev/null 2>&1 || true
+
       - name: Install V language
         run: |
           git clone --depth=1 https://github.com/vlang/v
